@@ -1,0 +1,53 @@
+name: openwrt_core
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sync]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: openwrt_core - [${{ matrix.target }}]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    strategy:
+      matrix:
+        target:
+          - x86_64
+
+    steps:
+    - name: Checkout
+      continue-on-error: true
+      uses: actions/checkout@main
+      with:
+        ref: ${{ matrix.target }}
+
+    - name: Setup variables
+      run: |
+        sudo timedatectl set-timezone 'Asia/Shanghai'
+        echo "target=x86_64-6.6" >> "$GITHUB_ENV"
+
+    - name: Sync kernel modules
+      run: |
+        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64_dev/kernel.tar.gz -o kernel.tar.gz --progress-bar
+        tar zxf kernel.tar.gz && rm -f kernel.tar.gz
+        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64_dev/openwrt-x86-64-generic.manifest -o manifest.txt --progress-bar
+        kernel_ver=$(grep -E "^kernel -" manifest.txt | awk '{print $3}')
+        mv kernel "$kernel_ver"
+        echo "RELEASE_NAME=x86_64" >> "$GITHUB_ENV"
+        
+
+    - name: Git push
+      continue-on-error: true
+      run: |
+        git config --local user.name "gitea-action"
+        git config --local user.email "git@cooluc.com"
+        [ -d .git ] && git init
+        git add --all
+        git commit -sm "${{ env.RELEASE_NAME }}"
+        git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.target }}
