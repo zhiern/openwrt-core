@@ -39,6 +39,7 @@ jobs:
         curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64_dev/openwrt-x86-64-generic.manifest -o manifest.txt --progress-bar
         kernel_ver=$(grep -E "^kernel -" manifest.txt | awk '{print $3}')
         mv kernel "$kernel_ver"
+        rm -f manifest.txt
         echo "RELEASE_NAME=x86_64" >> "$GITHUB_ENV"
         
 
