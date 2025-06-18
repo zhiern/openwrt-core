@@ -46,7 +46,7 @@ jobs:
       continue-on-error: true
       run: |
         git config --local user.name "gitea-action"
-        git config --local user.email "git@cooluc.com"
+        git config --local user.email "git@kejizero.online"
         [ -d .git ] && git init
         git add --all
         git commit -sm "${{ env.RELEASE_NAME }}"
