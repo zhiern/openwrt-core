@@ -34,9 +34,9 @@ jobs:
 
     - name: Sync kernel modules
       run: |
-        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64_dev/kernel.tar.gz -o kernel.tar.gz --progress-bar
+        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/kernel.tar.gz -o kernel.tar.gz --progress-bar
         tar zxf kernel.tar.gz && rm -f kernel.tar.gz
-        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64_dev/openwrt-x86-64-generic.manifest -o manifest.txt --progress-bar
+        curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/openwrt-x86-64-generic.manifest -o manifest.txt --progress-bar
         kernel_ver=$(grep -E "^kernel -" manifest.txt | awk '{print $3}')
         mv kernel "$kernel_ver"
         rm -f manifest.txt
