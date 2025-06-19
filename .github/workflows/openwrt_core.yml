@@ -40,7 +40,7 @@ jobs:
         echo "RELEASE_NAME=$kernel_ver" >> "$GITHUB_ENV"
 
         # 创建干净的工作目录
-        mkdir -p output/"$kernel_ver"
+        mkdir -p "$kernel_ver"
 
         # 下载并解压到该目录中（关键）
         curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/kernel.tar.gz -o kernel.tar.gz --progress-bar
