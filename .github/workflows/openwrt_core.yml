@@ -44,7 +44,7 @@ jobs:
 
         # 下载并解压到该目录中（关键）
         curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/kernel.tar.gz -o kernel.tar.gz --progress-bar
-        tar -zxf kernel.tar.gz -C output/"$kernel_ver"
+        tar -zxf kernel.tar.gz -C "$kernel_ver"
         rm -f kernel.tar.gz manifest.txt
         
 
