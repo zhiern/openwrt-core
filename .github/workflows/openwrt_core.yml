@@ -36,31 +36,24 @@ jobs:
     - name: Sync kernel modules
       run: |
         if [ "${{ matrix.target }}" = "x86_64" ]; then
-          # 下载文件
           curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/openwrt-x86-64-generic.manifest -o manifest.txt --progress-bar
           kernel_ver=$(grep -E "^kernel -" manifest.txt | awk '{print $3}')
           echo "RELEASE_NAME=$kernel_ver" >> "$GITHUB_ENV"
-
-          # 创建干净的工作目录
+      
           mkdir -p "$kernel_ver"
-
-          # 下载并解压到该目录中（关键）
           curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/kernel.tar.gz -o kernel.tar.gz --progress-bar
-          tar -zxf kernel.tar.gz -C "$kernel_ver"
-          rm -f kernel.tar.gz manifest.txt kernel
+          tar -zxf kernel.tar.gz --strip-components=1 -C "$kernel_ver"
+          rm -f kernel.tar.gz manifest.txt
+
         elif [ "${{ matrix.target }}" = "aarch64_generic" ]; then
-          # 下载文件
           curl -L https://github.com/zhiern/OpenWRT/releases/download/Rockchip/openwrt-rockchip-armv8.manifest -o manifest.txt --progress-bar
           kernel_ver=$(grep -E "^kernel -" manifest.txt | awk '{print $3}')
           echo "RELEASE_NAME=$kernel_ver" >> "$GITHUB_ENV"
 
-          # 创建干净的工作目录
           mkdir -p "$kernel_ver"
-
-          # 下载并解压到该目录中（关键）
           curl -L https://github.com/zhiern/OpenWRT/releases/download/Rockchip/kernel.tar.gz -o kernel.tar.gz --progress-bar
-          tar -zxf kernel.tar.gz -C "$kernel_ver"
-          rm -f kernel.tar.gz manifest.txt kernel
+          tar -zxf kernel.tar.gz --strip-components=1 -C "$kernel_ver"
+          rm -f kernel.tar.gz manifest.txt
         fi
 
     - name: Git push
