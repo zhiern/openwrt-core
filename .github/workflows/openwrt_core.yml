@@ -47,7 +47,7 @@ jobs:
           # 下载并解压到该目录中（关键）
           curl -L https://github.com/zhiern/OpenWRT/releases/download/X86_64/kernel.tar.gz -o kernel.tar.gz --progress-bar
           tar -zxf kernel.tar.gz -C "$kernel_ver"
-          rm -f kernel.tar.gz manifest.txt
+          rm -f kernel.tar.gz manifest.txt kernel
         elif [ "${{ matrix.target }}" = "aarch64_generic" ]; then
           # 下载文件
           curl -L https://github.com/zhiern/OpenWRT/releases/download/Rockchip/openwrt-rockchip-armv8.manifest -o manifest.txt --progress-bar
@@ -60,7 +60,7 @@ jobs:
           # 下载并解压到该目录中（关键）
           curl -L https://github.com/zhiern/OpenWRT/releases/download/Rockchip/kernel.tar.gz -o kernel.tar.gz --progress-bar
           tar -zxf kernel.tar.gz -C "$kernel_ver"
-          rm -f kernel.tar.gz manifest.txt
+          rm -f kernel.tar.gz manifest.txt kernel
         fi
 
     - name: Git push
