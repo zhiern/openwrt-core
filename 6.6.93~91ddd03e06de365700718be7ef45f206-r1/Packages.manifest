@@ -33,7 +33,7 @@ SHA256sum: 419ed7e029d3e529ac46ea17e50f2fc208961e7f9a64d713ce10f499d84f5212
 Description:  ARM auto core script.
 
 Package: base-files
-Version: 1659~989b12999c
+Version: 1659~eee14dd6db
 Depends: libc, netifd, jsonfilter, usign, openwrt-keyring, fstools, fwtool, procd, procd-seccomp, busybox
 Source: feeds/base/base-files
 SourceName: base-files
@@ -43,9 +43,9 @@ SourceDateEpoch: 1744585659
 URL: http://openwrt.org/
 Architecture: aarch64_generic
 Installed-Size: 276480
-Filename: base-files_1659~989b12999c_aarch64_generic.ipk
-Size: 52356
-SHA256sum: e9fbf7da5708eb0411059efef3700cb45b52a18294fc08a7b1465a8c494387fb
+Filename: base-files_1659~eee14dd6db_aarch64_generic.ipk
+Size: 52359
+SHA256sum: e2b383fef9c759834ee5eceb9b521bd93d5e3bafd774bc6517ac9bf483cec757
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: block-mount
@@ -6803,13 +6803,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 40960
 Filename: kmod-ipt-account_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 9857
-SHA256sum: 2db1ab64aa83846862b67f96b042a99b9f5808d703fb4629a9b7d9eaf8099316
+Size: 9860
+SHA256sum: 1d456f0cc020b52f297a343f2a61312b65517a0a969c5448992580d1803d79c7
 Description:  ACCOUNT netfilter module
 
 Package: kmod-ipt-asn
@@ -6820,13 +6820,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-asn_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 5310
-SHA256sum: ac4f833a413252a0cbe598655d22e3a8d1139570067bb3712f15adb79ac9bfa6
+Size: 5307
+SHA256sum: c4a5e2f2c7b90e4b98bd8732a81031fe45082834da9df8ebb85d88dda954442e
 Description:  asn netfilter module
 
 Package: kmod-ipt-chaos
@@ -6837,13 +6837,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-chaos_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 4140
-SHA256sum: 620904e4bb7cae2b4d8f3ec7b55240a90f10f12f0b317892955a1ce9895adfee
+Size: 4145
+SHA256sum: d5a84efa0d3e2aaceaf9d4685cc67154888fa853995a5cb58b51b81e65e9282e
 Description:  CHAOS netfilter module
 
 Package: kmod-ipt-checksum
@@ -6899,13 +6899,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 10240
 Filename: kmod-ipt-compat-xtables_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 1903
-SHA256sum: 3fd79c99a6dac8331bca5fda27b52e7cff69363b6518bcde16a0f0dbefb88cd8
+Size: 1907
+SHA256sum: 1770cb22e294861eb38871ab6374f896cfabc86fcea6bd60c9dd7d9c06e0c8ff
 Description:  API compatibilty layer netfilter module
 
 Package: kmod-ipt-condition
@@ -6916,13 +6916,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-condition_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 4883
-SHA256sum: f6dc35a479853d478466fcdd2892f8f2a1c89a4fd43df321e0c0702e0efcf676
+Size: 4874
+SHA256sum: 33d04ddb1a6c3ddd47b3b264c15eb4588bed845e52ac0e7f96a8179a1b291200
 Description:  Condition netfilter module
 
 Package: kmod-ipt-conntrack-extra
@@ -6995,14 +6995,14 @@ SourceName: coova-chilli
 License: GPL-2.0-or-later
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: http://www.coova.org/CoovaChilli
 Maintainer: Jaehoon You <teslamint@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 30720
 Filename: kmod-ipt-coova_6.6.93.1.6-r12_aarch64_generic.ipk
-Size: 8376
-SHA256sum: 433c757c7c07c0dec525fb95989c72247c60bb1fd8c87a7cafa6ffc0680cd3de
+Size: 8385
+SHA256sum: bb1f9c0dc705e39d7c1c9c858d1918dd3b4a886093726d9af1fa80db567867bf
 Description:  Netfilter kernel module for CoovaChilli
 
 Package: kmod-ipt-core
@@ -7055,13 +7055,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-delude_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3597
-SHA256sum: becdc11f96ae3cf5f37585896e908318c5c621f06ec5d021e15a96f4264df4dc
+Size: 3596
+SHA256sum: 0b8335e7da3882b6819d3422fe712aab7ebe979a55bfef87b1d6e02d109af019
 Description:  DELUDE netfilter module
 
 Package: kmod-ipt-dhcpmac
@@ -7072,13 +7072,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-dhcpmac_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3590
-SHA256sum: 987389ba40c0a9ca4c6f0174a1c312ec7c5ea7a2e687bfd9efbf10f0d32d40ea
+Size: 3594
+SHA256sum: fb25e410225610e381fd0aa56817a37e366df6dd5c1e34869f25e4210f1f7287
 Description:  DHCPMAC netfilter module
 
 Package: kmod-ipt-dnetmap
@@ -7089,13 +7089,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 10240
 Filename: kmod-ipt-dnetmap_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 1935
-SHA256sum: b1bdbb97587657c4927bb7ad0fd68d4bd2d7d1b8fe420e911f02931a7dc6a87f
+Size: 1934
+SHA256sum: 1b3d7a8c1e408bfdaef214713b86acbf33c8faaccfad0276dbe31a6b8cd0713f
 Description:  DNETMAP netfilter module
 
 Package: kmod-ipt-extra
@@ -7146,13 +7146,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-fuzzy_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3127
-SHA256sum: 0b74264d28d5003725af1d958df96592ef812740c9db9fe38119a5547383e602
+Size: 3128
+SHA256sum: 896ce1d7c871e729169c9496fa8146ae29d2dbba286c27d94844c93c9bc0937a
 Description:  fuzzy netfilter module
 
 Package: kmod-ipt-geoip
@@ -7163,13 +7163,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-geoip_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 5345
-SHA256sum: c3baeaa0861516c3e25d46b6d259ce5238a444bff13f3f6c6ef45f348140b5f5
+Size: 5346
+SHA256sum: 88f5882044e0ea79f9bb0065de61b1361eb317d4ace991e5ae99aa8e046d0f3e
 Description:  geoip netfilter module
 
 Package: kmod-ipt-hashlimit
@@ -7196,13 +7196,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-iface_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3126
-SHA256sum: 06df88f5db83ad78c3ab867e04ab75f78e76b219b8b5b98d00f71e6bce936722
+Size: 3129
+SHA256sum: ecba1d64ab09632a15dd5a321f53eeef30655bfca4628b0eeada4ef89de575d6
 Description:  iface netfilter module
 
 Package: kmod-ipt-ipmark
@@ -7213,13 +7213,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-ipmark_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 2872
-SHA256sum: 96bae0844928639a678374235b915a6804ba94acd075e42fb0a45eaf2e76d789
+Size: 2868
+SHA256sum: c102bcc0ff72dbf937fba8d50bd34e88e80f2ca84edfe9e40f70a01d7df3483a
 Description:  IPMARK netfilter module
 
 Package: kmod-ipt-ipopt
@@ -7258,13 +7258,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 30720
 Filename: kmod-ipt-ipp2p_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 9783
-SHA256sum: e9d8e934b452d4f4c46ee1f373f4551e25a706f1f5f155042b2f11176a696f58
+Size: 9776
+SHA256sum: f8ff48a83d46d4758024384dcadbe7ddf55efbce2510721b2ffeca9fc4c9b091
 Description:  IPP2P netfilter module
 
 Package: kmod-ipt-iprange
@@ -7329,13 +7329,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-ipv4options_6.6.93.3.26-r1_aarch64_generic.ipk
 Size: 2680
-SHA256sum: 790d8ea8c34b5c9929fd3504b1e2ff6232298f2e794ea0a25efe920e95883414
+SHA256sum: 96596af97c2557c7c8267a0515c07871a0d8ae9d03996cd485dd18a288dd65ba
 Description:  ipv4options netfilter module
 
 Package: kmod-ipt-led
@@ -7362,13 +7362,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-length2_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 4271
-SHA256sum: 2a4ccf873755e05a85f3cc27a4b3f8e35a754b4fdf48943c9bc31b5180c67cbf
+Size: 4272
+SHA256sum: 7355dceb8c9632f33ac1f4b38e2cd7a59a745f2445b98c534e9f53288eb08f6f
 Description:  length2 netfilter module
 
 Package: kmod-ipt-logmark
@@ -7379,13 +7379,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-logmark_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3623
-SHA256sum: 016f5f10e41a1271affc45b4746596598add965d71d75fded74ba7508eb3bab1
+Size: 3632
+SHA256sum: 306e7d198ea01aa19b9f28ed4ae4905cbad0015c14857e7f443f2baa95917e42
 Description:  LOGMARK netfilter module
 
 Package: kmod-ipt-lscan
@@ -7396,13 +7396,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-lscan_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 4009
-SHA256sum: eb14d2b92042048fd617bf793cced7524b51ce1d14c5b50b26d85c1fb468c5d7
+Size: 4011
+SHA256sum: 13caac9b8bdfcaad82faec21a346a8ec292855e63f9e4a79b0bd2e0a69053608
 Description:  lscan netfilter module
 
 Package: kmod-ipt-lua
@@ -7413,13 +7413,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 286720
 Filename: kmod-ipt-lua_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 90555
-SHA256sum: 41591d201f8ea504fd30f98fd13e4458b28d915fc914fe0f94865668b1d0dfa9
+Size: 90519
+SHA256sum: 2eb4cc94ea540b3d4f10ff53a2c58f28ed6f51487ac3b9269936e3c770e5e94f
 Description:  Lua PacketScript netfilter module
 
 Package: kmod-ipt-nat-extra
@@ -7483,13 +7483,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 40960
 Filename: kmod-ipt-nathelper-rtsp_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 11644
-SHA256sum: 54d6d96e3c2785acb9661990bc1102e71776402fa2c18add006083680252fc33
+Size: 11645
+SHA256sum: 5c5cf4c0d335620d05946bea1945b70e82bf2e72e532be6bfaba9b5d2784f4e5
 Description:  RTSP Conntrack and NAT netfilter module
 
 Package: kmod-ipt-nflog
@@ -7568,13 +7568,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-proto_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 3538
-SHA256sum: d2f2fe7b1cca86910af243fde14069134ae877ac1993054f37a16836c9f116de
+Size: 3534
+SHA256sum: f48f9c389f3b60be905e6d260527723b77394141cec1c693e3017e1c1b80d5a8
 Description:  PROTO netfilter module
 
 Package: kmod-ipt-psd
@@ -7585,13 +7585,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-psd_6.6.93.3.26-r1_aarch64_generic.ipk
 Size: 4908
-SHA256sum: 2f54a40e4f06b8dd58e04a4b2fa971f9396ff982ddf45bd1ba28f2268ab03171
+SHA256sum: 195e2ff0bb18e9d196ddd556f79f37c894aebd11929af3917847a9fd826696f6
 Description:  psd netfilter module
 
 Package: kmod-ipt-quota2
@@ -7602,13 +7602,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 30720
 Filename: kmod-ipt-quota2_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 5855
-SHA256sum: 28c5763b1bf3c9c81742e8598a49841e74084b97e7fb49d28fccae94dbaef74c
+Size: 5858
+SHA256sum: 55deecf674b8526eace9af1fb210b55ff079b471bc2037f90d07651bef2a7959
 Description:  quota2 netfilter module
 
 Package: kmod-ipt-raw6
@@ -7703,13 +7703,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-sysrq_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 5340
-SHA256sum: 8c2d59289cde5350d7ba04f0d13883bcb27d1164c334ef7e47bf2b096a5f5918
+Size: 5342
+SHA256sum: 2ce15ed288ca4bd665bbc995ba50b8e93dc26591188a0c92651455b0773633df
 Description:  SYSRQ netfilter module
 
 Package: kmod-ipt-tarpit
@@ -7720,13 +7720,13 @@ SourceName: xtables-addons
 License: GPL-2.0
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-ipt-tarpit_6.6.93.3.26-r1_aarch64_generic.ipk
-Size: 5339
-SHA256sum: 6d6e8ec18cb4cf78d2162c9417eb2ad6c7c69ae848e9d505a2db9a310fddbf97
+Size: 5338
+SHA256sum: 690bb71a56d8347eeeafd763d5fe12a1a8bb27b3336bf1d73dc51748e9d9bceb
 Description:  TARPIT netfilter module
 
 Package: kmod-ipt-tee
@@ -7933,12 +7933,12 @@ SourceName: jool
 License: GPL-2.0-only
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Architecture: aarch64_generic
 Installed-Size: 399360
 Filename: kmod-jool-netfilter_6.6.93.4.1.14-r1_aarch64_generic.ipk
-Size: 114425
-SHA256sum: f62a0418b57d886a7b60cbc4336c7728c9cdb20b47376dddfe3482998fe21ed4
+Size: 114441
+SHA256sum: 4e1c6044cc672ec5b0475827012a4f4c4e78413b39cad1d236c130367f1a7b49
 Description:  Jool is an Open Source SIIT and NAT64 for Linux.
  
  This package provides the kernel module for Jool with netfilter API Only.
@@ -8782,14 +8782,14 @@ SourceName: macremapper
 License: GPL-2.0-only
 LicenseFiles: kernelmod/COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: https://www.edgewaterwireless.com
 Maintainer: Carey Sonsino <careys@edgewaterwireless.com>
 Architecture: aarch64_generic
 Installed-Size: 51200
 Filename: kmod-macremapper_6.6.93.1.1.0-r2_aarch64_generic.ipk
-Size: 12570
-SHA256sum: 81e383bdff39ea125d700be48c4b5ee5c023db765d218fdcdc7d637c382829a4
+Size: 12577
+SHA256sum: d1e92b6baa65e9219c7504ab6da20c72e1c5fad170f4f95ff519a4be36fd3cc4
 Description:  Linux kernel module for implementation the DCW filtering mechanism
 
 Package: kmod-macsec
@@ -8988,14 +8988,14 @@ SourceName: mdio-netlink
 License: GPL-2.0-only
 LicenseFiles: COPYING
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: https://github.com/wkz/mdio-tools.git
 Maintainer: Damien Mascord <tusker@tusker.org>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-mdio-netlink_6.6.93.1.3.1-r2_aarch64_generic.ipk
-Size: 4795
-SHA256sum: 35895afd2f2b8292ef75afa27963f378013fa0609e0afd26b2ffd5b80f631505
+Size: 4790
+SHA256sum: cfd41492f60e84d129587f1bbf68670b9cf1f3a269de1845fa278c7104f83bc2
 Description:  mdio-netlink Linux MDIO netlink kernel module
 
 Package: kmod-mdio
@@ -10020,13 +10020,13 @@ SourceName: mtd-rw
 License: GPL-2.0
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Joseph C. Lehner <joseph.c.lehner@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 10240
 Filename: kmod-mtd-rw_6.6.93.2021.02.28~e8776739-r1_aarch64_generic.ipk
-Size: 2546
-SHA256sum: 0482f62d75f0adb63f9964af9bf44824186fbf8d7b8a436b3f51860675ccfc55
+Size: 2543
+SHA256sum: 3b18d5fb83404148ec2fab3f0fbe6e325ef43cc22ad0153944d13dcaa494041b
 Description:  A kernel module that temporarily makes all MTD partitions writeable.
 
 Package: kmod-mtdoops
@@ -10299,14 +10299,14 @@ Source: feeds/packages/admin/netatop
 SourceName: netatop
 License: GPL-2.0
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: https://www.atoptool.nl/
 Maintainer: Toni Uhlig <matzeton@googlemail.com>
 Architecture: aarch64_generic
 Installed-Size: 30720
 Filename: kmod-netatop_6.6.93.3.1-r1_aarch64_generic.ipk
-Size: 10001
-SHA256sum: c25ea4b48ff0724a1d905bf81121deb77ca193dacbe1ac89fcecb591694ae4e5
+Size: 9998
+SHA256sum: b8051e53319c44038776e46594284101cba898a7ae8a6b0ca2c0a22f18b7958c
 Description:  The optional kernel module netatop can be loaded to gather statistics about
  the TCP and UDP packets that have been transmitted/received per process and
  per thread. As soon as atop discovers that this module is active, it shows
@@ -11518,14 +11518,14 @@ SourceName: openvswitch
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 CPE-ID: cpe:/a:openvswitch:openvswitch
 Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-openvswitch-geneve_6.6.93.2.17.9-r1_aarch64_generic.ipk
-Size: 4588
-SHA256sum: 3402f42c53fae2ea14c295eb141e607b1e5ac5854c6aad0fe82c077bde774ae7
+Size: 4585
+SHA256sum: 5dee2f516baad4a4f23ecb761ca84ec6bab98dab1b5d2774b806f9c012e01558
 Description:  Open vSwitch Geneve tunneling support (upstream)
 
 Package: kmod-openvswitch-gre
@@ -11536,14 +11536,14 @@ SourceName: openvswitch
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 CPE-ID: cpe:/a:openvswitch:openvswitch
 Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-openvswitch-gre_6.6.93.2.17.9-r1_aarch64_generic.ipk
-Size: 4336
-SHA256sum: a5020b8a1bcb390dd8619c5ca8b52dfe06eca21ec34fc1c15557696617e238e1
+Size: 4343
+SHA256sum: 788761b91abe95bf1c2a551e6ac94365129495af01e4f86ea75116e5059d3412
 Description:  Open vSwitch GRE tunneling support (upstream)
 
 Package: kmod-openvswitch-vxlan
@@ -11554,14 +11554,14 @@ SourceName: openvswitch
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 CPE-ID: cpe:/a:openvswitch:openvswitch
 Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-openvswitch-vxlan_6.6.93.2.17.9-r1_aarch64_generic.ipk
-Size: 5649
-SHA256sum: 887a2357184bceb4abaf8fb5c46dcade7df1459e3a3ea8760238f57557e666f7
+Size: 5656
+SHA256sum: d8a7299011012155956e2bc9a5d38e5feddc788e4ae2d26e77b016ddc36db63e
 Description:  Open vSwitch VXLAN tunneling support (upstream)
 
 Package: kmod-openvswitch
@@ -11572,14 +11572,14 @@ SourceName: openvswitch
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 CPE-ID: cpe:/a:openvswitch:openvswitch
 Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 256000
 Filename: kmod-openvswitch_6.6.93.2.17.9-r1_aarch64_generic.ipk
-Size: 90804
-SHA256sum: 1e77400cbd698347df2cb7cfe1d196a8f96fbc4d3625c2551e4abdf9cfd5446d
+Size: 90806
+SHA256sum: 267467ec571c293eadf8556e92b31e60f3ed632218de37a0f8f4511bfb132c4d
 Description:  Open vSwitch kernel datapath (upstream)
 
 Package: kmod-ovpn-dco-v2
@@ -11589,13 +11589,13 @@ Source: feeds/packages/kernel/ovpn-dco
 SourceName: ovpn-dco
 License: GPL-2.0-only
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Jianhui Zhao <zhaojh329@gmail.com>
 Architecture: aarch64_generic
 Installed-Size: 102400
 Filename: kmod-ovpn-dco-v2_6.6.93.0.2.20240320-r1_aarch64_generic.ipk
-Size: 31310
-SHA256sum: 30ee76be66e82cc13b853b93c0244f373449ade45fca4473074f24fdc368dc70
+Size: 31318
+SHA256sum: ebda84685fdc289c526b61349d04ad54092af05d6e5d91de8622c3df6421caa4
 Description:  This module enhances the performance of the OpenVPN userspace software
  by offloading the data channel processing to kernelspace.
 
@@ -11661,13 +11661,13 @@ Source: feeds/packages/libs/libpfring
 SourceName: libpfring
 License: GPL-2.0-or-later
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Banglang Huang <banglang.huang@foxmail.com>
 Architecture: aarch64_generic
 Installed-Size: 215040
 Filename: kmod-pf-ring_6.6.93.8.6.1-r1_aarch64_generic.ipk
-Size: 70022
-SHA256sum: 1bf3ca79964182f9c6e4ce6565be55cfc1698bfa8453d758174a3730b87104c5
+Size: 70019
+SHA256sum: 36c9e35d39a526d7be0fc459aea2f319e90bf2f9dd429ed6da7d5aa542a56ffb
 Description:  Kernel module for libpf-ring package
 
 Package: kmod-phy-airoha-en8811h
@@ -14622,13 +14622,13 @@ Source: feeds/packages/net/siit
 SourceName: siit
 License: GPL-2.0-or-later
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 Maintainer: Vladimir Ulrich <admin@evl.su>
 Architecture: aarch64_generic
 Installed-Size: 20480
 Filename: kmod-siit_6.6.93.1.2-r4_aarch64_generic.ipk
-Size: 6109
-SHA256sum: b60c8c39ed3a80523629661e5ebc286f775e5f4438d29a66e5f78c1da3309ec6
+Size: 6108
+SHA256sum: cc60403345c321c0630ef0de8569b2e355c1a4c3743f852e195f9d88e40bcb1f
 Description:  Stateless IP ICMP Translation Algorithm
 
 Package: kmod-sis190
@@ -16764,14 +16764,14 @@ Source: feeds/packages/libs/dmx_usb_module
 SourceName: dmx_usb_module
 License: GPL-2.0-only
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: http://www.erwinrol.com/open-dmx-usb-linux-driver/
 Maintainer: Martijn Zilverschoon <martijn@friedzombie.com>
 Architecture: aarch64_generic
 Installed-Size: 30720
 Filename: kmod-usb-serial-dmx_usb_module_6.6.93.19.12.1-r2_aarch64_generic.ipk
-Size: 6697
-SHA256sum: 0b7e2b72c13d251632e3c610f7c678b6bd3e86aa3a9ae72810613f603469a136
+Size: 6691
+SHA256sum: e2aae75236d56b7bc849834033ef1cc62afbdd08d67bfd100e9c2e5423fe3363
 Description:  Open DMX USB is an open USB to DMX dongle hardware design developed by Enttec.
  The Open in Open DMX USB refers to the fact that everybody is free to use the
  design and produce its own USB DMX Dongle without paying any licenses.
@@ -17085,14 +17085,14 @@ SourceName: usb-serial-xr_usb_serial_common
 License: GPL-2.0-or-later
 LicenseFiles: LICENSE
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 URL: https://www.exar.com/content/document.ashx?id=21651
 Maintainer: Daniel Golle <daniel@makrotopia.org>
 Architecture: aarch64_generic
 Installed-Size: 51200
 Filename: kmod-usb-serial-xr_usb_serial_common_6.6.93.2023.03.21~90ad5301-r3_aarch64_generic.ipk
-Size: 16099
-SHA256sum: 69da0b56f3be8d1a7546d71faf3203e17bb80a31d69423bad1bf17a8de17a704
+Size: 16093
+SHA256sum: 280e4d4ede1a065a1aa3c93127e5af58cf42a62472d33d8dc8608aff185ed1a2
 Description:  Support for Exar USB to RS-485/RS-422
 
 Package: kmod-usb-serial
@@ -17362,14 +17362,14 @@ Depends: kernel (=6.6.93~91ddd03e06de365700718be7ef45f206-r1), kmod-video-core
 Source: feeds/packages/kernel/v4l2loopback
 SourceName: v4l2loopback
 Section: kernel
-SourceDateEpoch: 1750092366
+SourceDateEpoch: 1750504046
 CPE-ID: cpe:/o:v4l2loopback_project:v4l2loopback
 Maintainer: Michel Promonet <michel.promonet@free.fr>
 Architecture: aarch64_generic
 Installed-Size: 143360
 Filename: kmod-v4l2loopback_6.6.93.0.13.2-r1_aarch64_generic.ipk
-Size: 42876
-SHA256sum: 0bb965aa4eb2e503c184a274d291356f47a07e8d61ad9b2fff92b8918e470702
+Size: 42884
+SHA256sum: 01b0db9cf75ed5ee9222dc662e0e4bd40b3c69d117ed09b6d00ea972b37dee6c
 Description:  This module allows you to create "virtual video devices".
  Normal (v4l2) applications will read these devices as if
  they were ordinary video devices, but the video will not be
