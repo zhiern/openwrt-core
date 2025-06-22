@@ -4,7 +4,7 @@
   "packages": {
     "arptables-nft": "1.8.10-r1",
     "autocore-x86": "1.0.0-r1",
-    "base-files": "1659~989b12999c",
+    "base-files": "1659~eee14dd6db",
     "block-mount": "2024.07.14~408c2cc4-r1",
     "comgt-ncm": "0.32-r36",
     "comgt": "0.32-r36",
@@ -83,7 +83,7 @@
     "kmod-b44": "6.6.93-r1",
     "kmod-backlight-pwm": "6.6.93-r1",
     "kmod-backlight": "6.6.93-r1",
-    "kmod-batman-adv": "6.6.93.2024.3-r5",
+    "kmod-batman-adv": "6.6.93.2024.3-r6",
     "kmod-bcma": "6.6.93-r1",
     "kmod-be2net": "6.6.93-r1",
     "kmod-block2mtd": "6.6.93-r1",
