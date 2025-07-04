@@ -1,4 +1,4 @@
-name: Upload Kernel Manifest and Hash to FTP
+name: Upload Extracted Kernel Files to FTP
 
 on:
   workflow_dispatch:
@@ -11,22 +11,26 @@ jobs:
       - name: 创建工作目录
         run: mkdir -p kernel
 
-      - name: 下载 manifest 文件
+      - name: 下载 kernel.tar.gz
+        run: wget -O kernel/kernel.tar.gz https://github.com/zhiern/ZeroWrt-Action/releases/download/X86_64/kernel.tar.gz
+
+      - name: 解压 kernel.tar.gz 并删除压缩包
+        run: |
+          tar -xzf kernel/kernel.tar.gz -C kernel
+          rm kernel/kernel.tar.gz
+
+      - name: 下载 manifest 文件并提取 kernel hash
         run: |
           wget -O kernel/openwrt-x86-64-generic.manifest https://github.com/zhiern/ZeroWrt-Action/releases/download/X86_64/openwrt-x86-64-generic.manifest
-
-      - name: 提取 kernel 版本号
-        run: |
-          # 提取第三列作为 kernel 版本+hash
           HASH=$(grep '^kernel' kernel/openwrt-x86-64-generic.manifest | awk '{print $3}')
           echo "KERNEL_HASH=$HASH" >> $GITHUB_ENV
           echo "$HASH" > kernel/kernel_hash.txt
 
-      - name: 上传到 FTP 对应 kernel 目录
+      - name: 上传解压后的内核文件到 FTP
         uses: sbwml/FTP-Deploy-Action@master
         with:
           server: ${{ secrets.ftp_address }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: core/x86_64/${{ env.KERNEL_HASH }}/
-          local-dir: kernel/
+          local-dir: kernel/kernel/
