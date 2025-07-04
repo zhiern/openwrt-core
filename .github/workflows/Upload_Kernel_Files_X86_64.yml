@@ -1,4 +1,4 @@
-name: Upload Extracted Kernel Files to FTP
+name: Upload Extracted Kernel Files to FTP（X86_64)
 
 on:
   workflow_dispatch:
