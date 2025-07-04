@@ -1,0 +1,32 @@
+name: Upload Kernel Manifest and Hash to FTP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 创建工作目录
+        run: mkdir -p kernel
+
+      - name: 下载 manifest 文件
+        run: |
+          wget -O kernel/openwrt-x86-64-generic.manifest https://github.com/zhiern/ZeroWrt-Action/releases/download/X86_64/openwrt-x86-64-generic.manifest
+
+      - name: 提取 kernel 版本号
+        run: |
+          # 提取第三列作为 kernel 版本+hash
+          HASH=$(grep '^kernel' kernel/openwrt-x86-64-generic.manifest | awk '{print $3}')
+          echo "KERNEL_HASH=$HASH" >> $GITHUB_ENV
+          echo "$HASH" > kernel/kernel_hash.txt
+
+      - name: 上传到 FTP 对应 kernel 目录
+        uses: sbwml/FTP-Deploy-Action@master
+        with:
+          server: ${{ secrets.ftp_address }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          server-dir: core/x86_64/${{ env.KERNEL_HASH }}/
+          local-dir: kernel/
