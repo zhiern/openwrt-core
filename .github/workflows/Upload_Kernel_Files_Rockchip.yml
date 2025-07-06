@@ -33,6 +33,6 @@ jobs:
           server: ${{ secrets.ftp_address }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: core/aarch64_generic/${{ env.KERNEL_HASH }}
-          local-dir: kernel/${{ env.KERNEL_HASH }}
+          server-dir: core/aarch64_generic/${{ env.KERNEL_HASH }}/
+          local-dir: kernel/${{ env.KERNEL_HASH }}/
 
