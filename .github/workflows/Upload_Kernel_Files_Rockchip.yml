@@ -24,7 +24,7 @@ jobs:
           
       - name: 解压 kernel.tar.gz 并删除压缩包
         run: |
-          tar -xzf kernel/kernel.tar.gz -C kernel/${{ env.KERNEL_HASH }}
+          tar -xzf kernel/kernel.tar.gz -C ${{ env.KERNEL_HASH }}
           rm kernel/kernel.tar.gz
 
       - name: 上传解压后的内核文件到 FTP
