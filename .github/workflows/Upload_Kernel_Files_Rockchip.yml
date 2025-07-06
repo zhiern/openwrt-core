@@ -9,22 +9,23 @@ jobs:
 
     steps:
       - name: 创建工作目录
-        run: mkdir -p kernel
+        run: 
+          mkdir -p kernel
 
       - name: 下载 kernel.tar.gz
-        run: wget -O kernel/kernel.tar.gz https://github.com/zhiern/ZeroWrt-Action/releases/download/Rockchip/kernel.tar.gz
-
-      - name: 解压 kernel.tar.gz 并删除压缩包
-        run: |
-          tar -xzf kernel/kernel.tar.gz -C kernel
-          rm kernel/kernel.tar.gz
+        run: 
+          wget -O kernel/kernel.tar.gz https://github.com/zhiern/ZeroWrt-Action/releases/download/Rockchip/kernel.tar.gz
 
       - name: 下载 manifest 文件并提取 kernel hash
         run: |
           wget -O kernel/openwrt-x86-64-generic.manifest https://github.com/zhiern/ZeroWrt-Action/releases/download/Rockchip/openwrt-rockchip-armv8.manifest
           HASH=$(grep '^kernel' kernel/openwrt-rockchip-armv8.manifest | awk '{print $3}')
           echo "KERNEL_HASH=$HASH" >> $GITHUB_ENV
-          echo "$HASH" > kernel/kernel_hash.txt
+          
+      - name: 解压 kernel.tar.gz 并删除压缩包
+        run: |
+          tar -xzf kernel/kernel.tar.gz -C kernel/${{ env.KERNEL_HASH }}
+          rm kernel/kernel.tar.gz
 
       - name: 上传解压后的内核文件到 FTP
         uses: sbwml/FTP-Deploy-Action@master
@@ -32,5 +33,5 @@ jobs:
           server: ${{ secrets.ftp_address }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: core/aarch64_generic/${{ env.KERNEL_HASH }}/
-          local-dir: kernel/kernel/
+          server-dir: core/aarch64_generic/
+          local-dir: kernel/${{ env.KERNEL_HASH }}/
