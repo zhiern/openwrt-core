@@ -21,13 +21,13 @@ jobs:
           HASH=$(grep '^kernel' kernel/openwrt-rockchip-armv8.manifest | awk '{print $3}')
           echo "KERNEL_HASH=$HASH" >> $GITHUB_ENV
 
-      - name: 解压 kernel.tar.gz 到对应 hash 目录并删除压缩包
+      - name: 解压 kernel.tar.gz 到 kernel/${{ env.KERNEL_HASH }} 并删除压缩包
         run: |
           mkdir -p kernel/${{ env.KERNEL_HASH }}
           tar -xzf kernel/kernel.tar.gz -C kernel/${{ env.KERNEL_HASH }}
           rm kernel/kernel.tar.gz
 
-      - name: 上传解压后的内核文件到 FTP（hash 目录）
+      - name: 上传解压后的内核文件到 FTP（core/aarch64_generic/<hash>/）
         uses: sbwml/FTP-Deploy-Action@master
         with:
           server: ${{ secrets.ftp_address }}
@@ -35,4 +35,3 @@ jobs:
           password: ${{ secrets.ftp_password }}
           server-dir: core/aarch64_generic/${{ env.KERNEL_HASH }}/
           local-dir: kernel/${{ env.KERNEL_HASH }}/
-
