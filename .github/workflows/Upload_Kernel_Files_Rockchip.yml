@@ -24,7 +24,8 @@ jobs:
       - name: 解压 kernel.tar.gz 到 kernel/${{ env.KERNEL_HASH }} 并删除压缩包
         run: |
           mkdir -p kernel/${{ env.KERNEL_HASH }}
-          tar -xzf kernel/kernel.tar.gz -C kernel/${{ env.KERNEL_HASH }}
+          tar -xzf kernel/kernel.tar.gz -C kernel
+          mv kernel/kernel ${{ env.KERNEL_HASH }}
           rm kernel/kernel.tar.gz
 
       - name: 上传解压后的内核文件到 FTP（core/aarch64_generic/<hash>/）
@@ -33,5 +34,5 @@ jobs:
           server: ${{ secrets.ftp_address }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: core/aarch64_generic/${{ env.KERNEL_HASH }}/
-          local-dir: kernel/${{ env.KERNEL_HASH }}/
+          server-dir: core/aarch64_generic/
+          local-dir: kernel/
