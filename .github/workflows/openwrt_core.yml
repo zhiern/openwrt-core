@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         target:
-#          - aarch64_generic
+          - aarch64_generic
           - x86_64
 
     steps:
@@ -39,13 +39,13 @@ jobs:
 
     - name: Sync kernel modules
       run: |
-        wget https://github.com/zhiern/ZeroWrt/releases/download/OpenWrt-v24.10.2/x86_64-kmodpkg.tar.gz -O - | tar -xz
+        wget https://github.com/zhiern/ZeroWrt/releases/download/OpenWrt-v24.10.2/${{ matrix.target }}-kmodpkg.tar.gz -O - | tar -xz
         cd kmodpkg
-        new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//')
+        new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//; s/_aarch64_generic$//')
         mv packages "$new_name"
         for f in *; do [ "$f" != "$new_name" ] && mv "$f" "$new_name"/; done
         echo "kmod_dir=kmodpkg/$new_name" >> "$GITHUB_ENV"
-        
+
     - name: Release Kernel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
