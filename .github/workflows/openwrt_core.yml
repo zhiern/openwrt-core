@@ -31,7 +31,7 @@ jobs:
     - name: Setup variables
       run: |
         sudo timedatectl set-timezone 'Asia/Shanghai'
-        if [ "${{ matrix.target }}" = "aarch64_generic" ]; then
+        if [ "${{ matrix.target }}" = "aarch64" ]; then
           echo "target=aarch64-6.6" >> "$GITHUB_ENV"
         elif [ "${{ matrix.target }}" = "x86_64" ]; then
           echo "target=x86_64-6.6" >> "$GITHUB_ENV"
