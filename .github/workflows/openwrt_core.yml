@@ -1,4 +1,4 @@
-  name: openwrt_core
+name: openwrt_core
 
 on:
   workflow_dispatch:
