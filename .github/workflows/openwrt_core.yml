@@ -43,9 +43,9 @@ jobs:
         cd kmodpkg
         new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//; s/_aarch64_generic$//')
         mv packages "$new_name"
-        shopt -s extglob
-        mv !( "$new_name" ) "$new_name"/
-        shopt -u extglob
+        for f in *; do
+          [ "$f" != "$new_name" ] && mv "$f" "$new_name"/
+        done
         echo "kmod_dir=kmodpkg/$new_name" >> "$GITHUB_ENV"
 
     - name: Release Kernel
