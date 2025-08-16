@@ -40,8 +40,11 @@ jobs:
     - name: Sync kernel modules
       run: |
         wget https://github.com/zhiern/ZeroWrt/releases/download/OpenWrt-v24.10.2/x86_64-kmodpkg.tar.gz -O - | tar -xz
-        rm -rf x86_64-kmodpkg.tar.gz
-        cd kmodpkg && new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//') && mv packages "$new_name" && for f in *; do [ "$f" != "$new_name" ] && mv "$f" "$new_name"/; done
+        cd kmodpkg
+        new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//')
+        mv packages "$new_name"
+        for f in *; do [ "$f" != "$new_name" ] && mv "$f" "$new_name"/; done
+        echo "kmod_dir=kmodpkg/$new_name" >> "$GITHUB_ENV"
         
     - name: Release Kernel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -49,6 +52,6 @@ jobs:
         username: Kernel
         server: ${{ secrets.ftp_address }}
         password: ${{ secrets.ftp_password }}
-        server-dir: core/${{ matrix.model }}/
-        local-dir: kmodpkg/
+        server-dir: core/${{ matrix.target }}/
+        local-dir: ${{ env.kmod_dir }}/
         dangerous-clean-slate: false
