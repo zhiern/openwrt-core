@@ -41,6 +41,7 @@ jobs:
       run: |
         wget https://github.com/zhiern/ZeroWrt/releases/download/OpenWrt-v24.10.2/${{ matrix.target }}-kmodpkg.tar.gz -O - | tar -xz
         cd kmodpkg
+        rm -rf packages/{Packages,Packages.gz,Packages.manifest,Packages.sig}
         new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//; s/_aarch64_generic$//')
         mv packages "$new_name"
         for f in *; do [ "$f" != "$new_name" ] && mv "$f" "$new_name"/; done
