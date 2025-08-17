@@ -55,5 +55,5 @@ jobs:
         server: ${{ secrets.ftp_address }}
         password: ${{ secrets.ftp_password }}
         server-dir: core/${{ matrix.target }}/
-        local-dir: ${{ env.kmod_dir }}/
+        local-dir: kmodpkg/
         dangerous-clean-slate: false
