@@ -39,21 +39,20 @@ jobs:
 
     - name: Sync kernel modules
       run: |
-        wget https://github.com/zhiern/ZeroWrt/releases/download/OpenWrt-v24.10.2/${{ matrix.target }}-kmodpkg.tar.gz -O - | tar -xz
-        cd kmodpkg
-        new_name=$(basename packages/kernel_*.ipk | sed -E 's/^kernel_//; s/\.ipk$//; s/_x86_64$//; s/_aarch64_generic$//')
-        mv packages "$new_name"
-        for f in *; do
-          [ "$f" != "$new_name" ] && mv "$f" "$new_name"/
-        done
-        echo "kmod_dir=kmodpkg/$new_name" >> "$GITHUB_ENV"
+        kmod=$(curl -sk "https://api.github.com/repos/zhiern/ZeroWrt/releases" | grep "browser_download_url" | grep "${{ env.target }}" | sort -V | tail -1 | awk '{print $2}' | sed 's/\"//g')
+        kmod_name=$(basename $kmod | sed 's/\.tar\.gz$//;s/^[^-]*-//')
+        rm -rf $kmod_name
+        curl -L $kmod -o $kmod_name.tar.gz --progress-bar
+        tar zxf $kmod_name.tar.gz && rm -f $kmod_name.tar.gz
+        echo "RELEASE_NAME=$kmod_name" >> "$GITHUB_ENV"
+        echo $kmod_name
 
-    - name: Release Kernel
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        username: ftpopenwrt
-        server: ${{ secrets.ftp_address }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: core/${{ matrix.target }}/
-        local-dir: kmodpkg/
-        dangerous-clean-slate: false
+    - name: Git push
+      continue-on-error: true
+      run: |
+        git config --local user.name "zhiern"
+        git config --local user.email "2519840456@qq.com"
+        [ -d .git ] && git init
+        git add --all
+        git commit -sm "${{ env.RELEASE_NAME }}"
+        git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.target }}
