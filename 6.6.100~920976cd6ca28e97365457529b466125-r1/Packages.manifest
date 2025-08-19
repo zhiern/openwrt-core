@@ -44,8 +44,8 @@ URL: http://openwrt.org/
 Architecture: x86_64
 Installed-Size: 276480
 Filename: base-files_1~d9340319c6_x86_64.ipk
-Size: 53144
-SHA256sum: b523fd371f1cbeaa86f10685b733122cdf647f6f80e9400a43336b5e22e34dfa
+Size: 53137
+SHA256sum: b9f536998d606105f918f75ee3a702e093573390df8437372a0728e667900c2a
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: block-mount
@@ -6744,8 +6744,8 @@ SourceDateEpoch: 1750714327
 Architecture: x86_64
 Installed-Size: 61440
 Filename: kmod-ikconfig_6.6.100-r1_x86_64.ipk
-Size: 51981
-SHA256sum: 1e83a31a538b281269678783900df6dec46734f883ab41acaa6e362ff1ecc1e6
+Size: 51980
+SHA256sum: 8c45b351ec2a40b6564c3a77fbca536e8847c73ea6de47f800e1004c249ce95a
 Description:  Kernel configuration via /proc/config.gz
 
 Package: kmod-imx2-wdt
@@ -12244,8 +12244,8 @@ SourceDateEpoch: 1754851362
 Architecture: x86_64
 Installed-Size: 2549760
 Filename: kmod-oaf_6.6.100-r1_x86_64.ipk
-Size: 814451
-SHA256sum: fe3a786d7438c7d8d4e7e640b5dfcb7df14e732b3d0bbd7a81a3619151070ca4
+Size: 814496
+SHA256sum: d22c2fe946b82c5b94e783f8ccb80f7e30012c00381bfe680d3fb2251cf690e1
 Description:  open appfilter kernel module 
 
 Package: kmod-oid-registry
