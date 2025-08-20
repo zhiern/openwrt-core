@@ -57,7 +57,7 @@ jobs:
         git add --all
         git commit -sm "${{ env.RELEASE_NAME }}"
         git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.target }}
-
+        ls
 
     - name: Release Kernel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
