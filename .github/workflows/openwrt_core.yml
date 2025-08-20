@@ -57,12 +57,13 @@ jobs:
         git commit -sm "${{ env.RELEASE_NAME }}"
         git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.target }}
 
-    - name: Sync Git
+
+    - name: Release Kernel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-         server: ${{ secrets.ftp_address }}
-         username: ftpopenwrt
-         password: ${{ secrets.ftp_password }}
-         server-dir: core/x86_64/
-         local-dir: ${{ env.RELEASE_NAME }}/
-#         dangerous-clean-slate: true
+        username: ftpopenwrt
+        server: ${{ secrets.ftp_address }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: core/${{ matrix.target }}/
+        local-dir: ${{ env.RELEASE_NAME }}/
+        dangerous-clean-slate: false
