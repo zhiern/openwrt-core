@@ -64,5 +64,5 @@ jobs:
          username: ftpopenwrt
          password: ${{ secrets.ftp_password }}
          server-dir: core/x86_64/
-         local-dir: $kmod_name/
+         local-dir: $RELEASE_NAME/
 #         dangerous-clean-slate: true
