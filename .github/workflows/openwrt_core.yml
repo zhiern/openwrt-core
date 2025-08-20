@@ -57,12 +57,12 @@ jobs:
         git commit -sm "${{ env.RELEASE_NAME }}"
         git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:${{ matrix.target }}
 
-    - name: Release OTA
+    - name: Sync Git
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
          server: ${{ secrets.ftp_address }}
          username: ftpopenwrt
          password: ${{ secrets.ftp_password }}
-         server-dir: ota/
-         local-dir: ota/
-         dangerous-clean-slate: true
+         server-dir: core/x86_64/
+         local-dir: $kmod_name/
+#         dangerous-clean-slate: true
