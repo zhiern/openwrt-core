@@ -34,8 +34,8 @@ URL: http://openwrt.org/
 Architecture: x86_64
 Installed-Size: 276480
 Filename: base-files_1~d9340319c6_x86_64.ipk
-Size: 53132
-SHA256sum: 933385a4b6cca6c69196c1a9f7c57a650c9392bad62237637874e8273805eab5
+Size: 53133
+SHA256sum: 5d1a5c447f76943026810cc404c7c3c5a73d3aea75cf5437ae87facff88d16cd
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: block-mount
@@ -5120,8 +5120,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 61440
 Filename: kmod-ikconfig_6.6.100-r1_x86_64.ipk
-Size: 51977
-SHA256sum: 025fb5d4e27a8c04eb8e46acd6dda8a0314eaab58134ec0192ad38eea605cb82
+Size: 51988
+SHA256sum: 900b28e082efce53cb70de54e056686cdb07ed3f042e2b6c10e2e4001e37a0fb
 Description:  Kernel configuration via /proc/config.gz
 
 Package: kmod-imx2-wdt
@@ -9278,8 +9278,8 @@ Section: TT Apps
 Architecture: x86_64
 Installed-Size: 2549760
 Filename: kmod-oaf_6.6.100-r1_x86_64.ipk
-Size: 814494
-SHA256sum: c7cafb49a5188ac5e11dce4624f6519c7398ac3f0a789a4b6d86a8296e225a05
+Size: 814449
+SHA256sum: d6a5a1057418d3925bb076bd2fc402617f522f5eb56bbe0e50374cbda2b7a972
 Description:  open appfilter kernel module 
 
 Package: kmod-oid-registry
@@ -9867,8 +9867,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 30720
 Filename: kmod-ppp-synctty_6.6.100-r1_x86_64.ipk
-Size: 6866
-SHA256sum: dc6cdd0a7d91dd22098cab770fcad60d3142d771c0001cb30a140b8725ddb2a7
+Size: 6869
+SHA256sum: 2480ae4fb931992583dd76377438964946337d9e4cb613f64e4004cfed411aeb
 Description:  Kernel modules for PPP sync tty support
 
 Package: kmod-ppp
@@ -9879,8 +9879,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 112640
 Filename: kmod-ppp_6.6.100-r1_x86_64.ipk
-Size: 32615
-SHA256sum: 10370e3d64d014cdba6d604096e9437cefa203a41f9b412a4793cbd961b3a03e
+Size: 32764
+SHA256sum: d01fee4c85d85e345a41a2913c7ef8edc237b75ec59e4b482351637d96193083
 Description:  Kernel modules for PPP support
 
 Package: kmod-pppoa
@@ -9891,8 +9891,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 30720
 Filename: kmod-pppoa_6.6.100-r1_x86_64.ipk
-Size: 6657
-SHA256sum: f1b0419c3d6ec624dd0339e1322361e01e0a23631feddbbede34982444654132
+Size: 6676
+SHA256sum: 22d0361b29a0b45565861fafe5a984a2c54e528a10db653143560ad052dbadd1
 Description:  Kernel modules for PPPoA (PPP over ATM) support
 
 Package: kmod-pppoe
@@ -9903,8 +9903,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 40960
 Filename: kmod-pppoe_6.6.100-r1_x86_64.ipk
-Size: 9889
-SHA256sum: 7dcabb1647a1d79d99d7ce4356094b5c49919e3f90469fe9a240ee2fe67cd5d5
+Size: 9886
+SHA256sum: c006a4180cebc7f9e0429bfc32652b82cff1f9b080f527c956f5779002802f5c
 Description:  Kernel module for PPPoE (PPP over Ethernet) support
 
 Package: kmod-pppol2tp
@@ -9915,8 +9915,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 51200
 Filename: kmod-pppol2tp_6.6.100-r1_x86_64.ipk
-Size: 13447
-SHA256sum: 2f295ef05c06a761a07c066e9a142b1d9e24adf17feabf5b0f8e9bf4c285ed91
+Size: 13440
+SHA256sum: db444370aa95736d832610c80017642f4f6b19d904d2ae387dfec49475b4bd19
 Description:  Kernel modules for PPPoL2TP (PPP over L2TP) support
 
 Package: kmod-pppox
@@ -9927,8 +9927,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 20480
 Filename: kmod-pppox_6.6.100-r1_x86_64.ipk
-Size: 3677
-SHA256sum: 46532d0431743c2d4af545cc18ea93fecd8330c2467e8f291d7bcac5768cfca7
+Size: 3684
+SHA256sum: 44965cf7ae76fcd976ecfd47682d9ca3210df6aaaeb20c1e52159cff6342415f
 Description:  Kernel helper module for PPPoE and PPTP support
 
 Package: kmod-pps-gpio
@@ -9980,8 +9980,8 @@ Section: kernel
 Architecture: x86_64
 Installed-Size: 30720
 Filename: kmod-pptp_6.6.100-r1_x86_64.ipk
-Size: 7858
-SHA256sum: f7bdeacafa8790b159f6b96a47adfcb7b214cfffb24d35caa0e71cddcda4670a
+Size: 7866
+SHA256sum: a1750ba9df1b65cfa944f2f8b39a9db4b0cabdc5d8448656cf0ef17b908b1912
 Description:  PPtP support
 
 Package: kmod-pstore
